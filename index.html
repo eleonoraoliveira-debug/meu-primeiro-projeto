@@ -1,0 +1,273 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Primeiro Site</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        /* MENU */
+        header {
+            background-color: #111;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        /* INÍCIO */
+        #inicio {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #111, #333);
+            color: white;
+            padding: 30px;
+        }
+
+        #inicio h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        #inicio p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #00aaff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #0088cc;
+        }
+
+        /* SEÇÕES */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 30px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* PROJETOS */
+        .projetos {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* CONTATO */
+        #contato {
+            text-align: center;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            #inicio h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav>
+            <div class="logo">MeuSite</div>
+
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INÍCIO -->
+    <main id="inicio">
+        <div>
+            <h1>Olá, eu sou [Eleonora] 👋</h1>
+
+            <p>
+                Este é o meu primeiro projeto utilizando HTML e CSS.
+            </p>
+
+            <a href="#sobre" class="botao">
+                Conheça meu site
+            </a>
+        </div>
+    </main>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+
+        <p>
+            Olá! Meu nome é [Eleonora].
+            Estou começando meus estudos em programação e
+            desenvolvimento de sistemas.
+            Este é um dos meus primeiros projetos utilizando HTML e CSS.
+        </p>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+        <h2>Meus projetos</h2>
+
+        <div class="projetos">
+
+            <div class="card">
+                <h3>Projeto 1</h3>
+
+                <p>
+                    Meu primeiro site desenvolvido em HTML.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Projeto 2</h3>
+
+                <p>
+                    Aqui vou colocar meu próximo projeto.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Projeto 3</h3>
+
+                <p>
+                    Em breve adicionarei mais projetos.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <p>
+            Quer falar comigo?
+        </p>
+
+        <br>
+
+        <a href="mailto:seuemail@email.com" class="botao">
+            Enviar mensagem
+        </a>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>
+            © 2026 - Meu Primeiro Site
+        </p>
+    </footer>
+
+</body>
+</html>
+```
